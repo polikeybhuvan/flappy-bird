@@ -1,112 +1,480 @@
 <div align="center">
 
 # 🐦 Flappy Bird
-### A Classic 2D Side-Scrolling Game — Rebuilt from Scratch in Unity 6
 
-![Unity](https://img.shields.io/badge/Unity%206-000000?style=flat-square&logo=unity&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-Windows%20Standalone-0078D6?style=flat-square&logo=windows&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Complete-3fb950?style=flat-square)
+### A Classic 2D Arcade Game Recreated from Scratch in Unity 6
 
-🎮 **[Download & Play the Game](https://drive.google.com/file/d/1sv-G3rRYkOEEf2EZqmJeTicc7UhrmKic/view?usp=sharing)** &nbsp;·&nbsp; 📄 **[Read the Full Project Report](https://drive.google.com/file/d/1DB0Lqq7OpTAKe8l3Sb1ocDvvv6iNY26C/view?usp=sharing)**
+<p>
+A faithful recreation of one of the most iconic arcade games ever made—built entirely from scratch using <b>Unity 6</b> and <b>C#</b>.
+</p>
+
+<br>
+
+![Unity](https://img.shields.io/badge/Unity-6-000000?style=for-the-badge&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-Programming-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows)
+![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+<br><br>
+
+🎮 **[Download Game](YOUR_GAME_LINK)** • 📄 **[Project Report](YOUR_REPORT_LINK)**
 
 </div>
 
 ---
 
-### // overview
+# 🎯 About The Project
 
-> Everyone knows Flappy Bird. Almost no one has *built* it.
+Flappy Bird is one of the simplest games to play—but recreating it properly requires much more than making a bird jump.
 
-This project recreates Dong Nguyen's 2013 classic from the ground up in **Unity 6** — not a copy-paste tutorial follow-along, but a from-scratch implementation covering Physics 2D, event-driven scripting, UI state machines, and persistent data storage. Three scripts, one Singleton architecture, zero external asset dependencies.
+This project is a **complete recreation of the original Flappy Bird**, developed entirely from scratch in **Unity 6** using **C#**.
 
-<br>
+Rather than following a tutorial line-by-line, the objective was to understand how every gameplay system works internally and implement it independently.
 
-### // what it does
+The project demonstrates:
+
+- Physics-based character movement
+- Event-driven gameplay
+- Procedural obstacle spawning
+- Game state management
+- Persistent leaderboard storage
+- Clean Unity architecture
+- UI state transitions
+
+The result is a polished Windows desktop game featuring an authentic gameplay experience with a modular architecture that serves as a strong foundation for future Unity projects.
+
+---
+
+# 🎥 Gameplay
+
+> **Add your gameplay GIF here**
 
 ```
-> tap SPACE             → bird flaps upward against gravity
-> survive pipes         → dynamic, randomised obstacle spawning every 2s
-> clear a gap           → live score increments via trigger zones
-> hit something         → Game Over, score saved permanently
-> beat your best        → Top-5 leaderboard, medals for top 3, PlayerPrefs-backed
+assets/gameplay.gif
 ```
 
-<br>
+*A short gameplay GIF instantly makes the repository far more engaging.*
 
-### // tech stack
+---
 
-| Layer | Tools |
-|---|---|
-| Engine | Unity 6 (6000.3.8f1) |
-| Language | C# — Mono / IL2CPP |
-| Physics | Rigidbody2D · BoxCollider2D · Trigger Zones |
-| UI | Canvas · TextMeshPro |
+# ✨ Features
+
+## 🎮 Gameplay
+
+- Physics-based bird movement
+- Endless side-scrolling gameplay
+- Random obstacle generation
+- Real-time score tracking
+- Responsive collision detection
+- Authentic Flappy Bird feel
+
+---
+
+## ⚙️ Game Systems
+
+- Three-state game loop
+
+  - Start Menu
+  - Gameplay
+  - Game Over
+
+- Singleton Game Manager
+- Event-driven scripting
+- Automatic obstacle destruction
+- Object lifecycle management
+
+---
+
+## 💾 Persistence
+
+- Automatic score saving
+- Best score tracking
+- Persistent Top-5 leaderboard
+- PlayerPrefs data storage
+
+---
+
+## 🖥️ User Interface
+
+- Start Menu
+- Pause using Time.timeScale
+- Game Over panel
+- Live score display
+- Best score display
+- Medal system 🥇🥈🥉
+
+---
+
+# 📸 Screenshots
+
+| Gameplay | Game Over |
+|----------|-----------|
+| Add Screenshot | Add Screenshot |
+
+---
+
+# 🏗 Architecture
+
+```
+                     +----------------------+
+                     |    GameManager       |
+                     +----------------------+
+                      |    |           |
+                      |    |           |
+                      |    |           |
+                Score |    | Game State
+                      |    |
+                      ↓    ↓
+              +-----------------+
+              | PlayerController|
+              +-----------------+
+                      |
+               Collision Events
+                      |
+                      ↓
+                Trigger Game Over
+
+                      ↑
+
+              +-----------------+
+              |     Pipes       |
+              +-----------------+
+                      |
+              Spawn Every 2 Seconds
+                      |
+                Random Height
+```
+
+The game follows a clean **three-state architecture**, ensuring each gameplay phase remains independent and easy to maintain.
+
+---
+
+# 🔄 Game Flow
+
+```
+Start Menu
+
+↓
+
+Player Presses Play
+
+↓
+
+Gameplay Starts
+
+↓
+
+Spawn Pipes Every 2 Seconds
+
+↓
+
+Player Scores
+
+↓
+
+Collision Detected
+
+↓
+
+Game Over
+
+↓
+
+Leaderboard Updated
+
+↓
+
+Play Again
+```
+
+---
+
+# 🧠 Technical Highlights
+
+## Physics
+
+- Rigidbody2D
+- Gravity tuning
+- Jump impulse balancing
+
+---
+
+## Collision System
+
+- Obstacle collision
+- Ground collision
+- Trigger zones
+- Score detection
+
+---
+
+## UI Management
+
+- Canvas
+- TextMeshPro
+- Dynamic panel switching
+- Live score updates
+
+---
+
+## Data Persistence
+
+Player scores are stored locally using **PlayerPrefs**.
+
+Features include
+
+- Best Score
+- Top 5 Leaderboard
+- Automatic sorting
+- Persistent storage
+
+---
+
+# 📂 Project Structure
+
+```
+FlappyBird/
+
+│
+
+├── Assets/
+
+│ ├── Scripts/
+
+│ │ ├── GameManager.cs
+
+│ │ ├── PlayerController.cs
+
+│ │ └── Speed.cs
+
+│
+
+├── Prefabs/
+
+├── Sprites/
+
+├── Scenes/
+
+├── UI/
+
+└── README.md
+```
+
+---
+
+# 🧩 Script Responsibilities
+
+| Script | Responsibility |
+|---------|---------------|
+| **GameManager.cs** | Controls the entire game loop, obstacle spawning, score system, UI transitions, leaderboard, and persistent storage. |
+| **PlayerController.cs** | Handles bird movement, user input, collision detection, and scoring events. |
+| **Speed.cs** | Moves obstacles and scrolling elements across the screen. |
+
+---
+
+# 🚧 Challenges & Solutions
+
+## Physics Tuning
+
+Finding the correct balance between gravity and jump force required multiple iterations before achieving gameplay that felt responsive without becoming frustrating.
+
+---
+
+## Obstacle Management
+
+Pipes are spawned procedurally and automatically destroyed after leaving the screen, preventing unnecessary memory usage.
+
+---
+
+## Duplicate Game Over Events
+
+Multiple collisions could trigger Game Over more than once.
+
+A guard clause prevents duplicate execution.
+
+```csharp
+if (isGameOver)
+    return;
+```
+
+---
+
+## Persistent Leaderboard
+
+Scores are
+
+- Sorted automatically
+- Limited to Top 5
+- Saved using PlayerPrefs
+- Loaded every game session
+
+---
+
+# 💡 Engineering Decisions
+
+## Singleton Pattern
+
+A Singleton GameManager was used because only one central authority should manage
+
+- Game State
+- Score
+- UI
+- Obstacle Spawning
+- Leaderboard
+
+This removes duplicate state management and simplifies communication between scripts.
+
+---
+
+## Event-Driven Architecture
+
+Instead of every object managing everything independently,
+
+PlayerController notifies GameManager,
+
+and GameManager decides what happens next.
+
+This keeps responsibilities separated and the codebase easier to maintain.
+
+---
+
+# 📊 Technologies Used
+
+| Category | Technology |
+|----------|------------|
+| Engine | Unity 6 |
+| Language | C# |
+| IDE | Visual Studio |
+| Physics | Rigidbody2D |
+| UI | TextMeshPro |
 | Persistence | PlayerPrefs |
-| Architecture | Singleton pattern, event-driven collision handling |
+| Pattern | Singleton |
+| Platform | Windows Standalone |
 
-<br>
+---
 
-### // code
+# 📈 Project Highlights
 
-The full source is in this repo — three scripts, each with a single clear responsibility:
+✅ Built entirely from scratch
 
-| File | Responsibility |
-|---|---|
-| [`GameManager.cs`](./GameManager.cs) | Singleton controller — obstacle spawning, UI state transitions, score tracking, leaderboard save/load |
-| [`PlayerController.cs`](./PlayerController.cs) | Bird input (space to flap), collision detection, score-trigger handling |
-| [`Speed.cs`](./Speed.cs) | Scrolls obstacles and background leftward at a constant rate |
+✅ Unity 6
 
-<br>
+✅ C#
 
-### // architecture
+✅ Physics-based gameplay
 
-**Scene Hierarchy:** Game Manager · Player · Background · Ground · Main Camera · Global Light 2D · Canvas (Start Menu / Game Over / Score) · Event System
+✅ Procedural obstacle generation
 
-**Game Loop — 3 States:**
+✅ Singleton architecture
+
+✅ Event-driven scripting
+
+✅ PlayerPrefs persistence
+
+✅ Dynamic UI
+
+✅ Top-5 leaderboard
+
+---
+
+# 📚 What I Learned
+
+This project strengthened my understanding of
+
+- Unity 2D workflow
+- Physics2D
+- Rigidbody2D
+- BoxCollider2D
+- Trigger Zones
+- MonoBehaviour lifecycle
+- Object instantiation
+- Object destruction
+- Singleton Pattern
+- Event-driven programming
+- UI development
+- Game state management
+- Persistent data storage
+- Clean project architecture
+
+---
+
+# 🚀 Future Improvements
+
+- Sound effects
+- Background music
+- Difficulty progression
+- Mobile controls
+- Android build
+- Animated backgrounds
+- Power-ups
+- Cloud leaderboard
+- Achievement system
+
+---
+
+# ⚙️ Getting Started
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/flappy-bird.git
+```
+
+Open the project using
 
 ```
-STATE 1  Start Menu      Time.timeScale = 0f   →  Play / Exit buttons
-STATE 2  Gameplay        Time.timeScale = 1f   →  pipes spawn @ 2s, score live
-STATE 3  Game Over       collision detected    →  score saved, leaderboard shown
+Unity 6 (6000.3.8f1)
 ```
 
-<br>
+Press **Play** inside Unity.
 
-### // challenges & how they were solved
+---
 
-| Challenge | Solution |
-|---|---|
-| Gravity & jump feel | Iteratively tuned Rigidbody2D gravity scale + jump impulse |
-| Pipe spawn clutter | `Destroy(obs, 5f)` + distinct `Obstacle` / `ScoreZone` tags |
-| Score UI syncing with game state | Centralised visibility control via GameManager |
-| Leaderboard persistence | PlayerPrefs, sorted descending, capped at 5, medals rebuilt each run |
-| Duplicate Game Over triggers | Guard clause: `if (isGameOver) return;` |
+# 🎮 Controls
 
-<br>
+| Key | Action |
+|-----|--------|
+| Space | Flap |
+| Mouse | UI Buttons |
 
-### // skills exercised
+---
 
-`Unity 2D Workflow` `Physics2D` `Collider Triggers` `Singleton Pattern` `Event-Driven Scripting` `TextMeshPro UI` `PlayerPrefs Persistence` `Game Loop Architecture`
+# 👨‍💻 Author
 
-<br>
+## Polikey Bhuvan
 
-### // outcomes
+**B.Tech Computer Science & Engineering**
 
-- ✅ Fully functional 3-state game loop, built and shipped as a Windows standalone
-- ✅ Physics-accurate bird movement matching the original's "feel"
-- ✅ Randomised obstacle spawning — a new run every time
-- ✅ Persistent Top-5 leaderboard that survives restarts
-- ✅ Clean Singleton architecture — no race conditions, no duplicate instances
+Passionate about
 
-<br>
+- Game Development
+- AI
+- Software Engineering
+- Unity Development
+
+---
+
+## 🌐 Connect
+
+Portfolio
+
+https://yourportfolio.com
+
+LinkedIn
+
+https://linkedin.com/in/polikeybhuvan
+
+GitHub
+
+https://github.com/polikeybhuvan
 
 ---
 
 <div align="center">
 
-**Polikey Bhuvan** — B.Tech CSE, Centurion University of Technology & Management
+### ⭐ If you enjoyed this project, consider giving the repository a star!
 
-[Portfolio](https://polikey-bhuvan.onrender.com) · [LinkedIn](https://linkedin.com/in/polikeybhuvan) · [GitHub](https://github.com/polikeybhuvan)
+Made with ❤️ using Unity 6 & C#
 
 </div>
