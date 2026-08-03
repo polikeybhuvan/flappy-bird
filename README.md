@@ -16,7 +16,7 @@ A faithful recreation of one of the most iconic arcade games ever made—built e
 ![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-<br><br>
+<br>
 
 🎮 **[Download Game](YOUR_GAME_LINK)** • 📄 **[Project Report](YOUR_REPORT_LINK)**
 
