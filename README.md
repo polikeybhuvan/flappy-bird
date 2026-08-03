@@ -117,15 +117,15 @@ assets/gameplay.gif
 # 🏗 Architecture
 
 ```
-                     +----------------------+
-                     |    GameManager       |
-                     +----------------------+
-                      |    |           |
-                      |    |           |
-                      |    |           |
-                Score |    | Game State
-                      |    |
-                      ↓    ↓
+            +----------------------+
+            |    GameManager       |
+            +----------------------+
+                    |    |           
+                    |    |           
+                    |    |           
+              Score |    | Game State
+                    |    |
+                    ↓    ↓
               +-----------------+
               | PlayerController|
               +-----------------+
@@ -133,7 +133,7 @@ assets/gameplay.gif
                Collision Events
                       |
                       ↓
-                Trigger Game Over
+               Trigger Game Over
 
                       ↑
 
@@ -143,7 +143,7 @@ assets/gameplay.gif
                       |
               Spawn Every 2 Seconds
                       |
-                Random Height
+                 Random Height
 ```
 
 The game follows a clean **three-state architecture**, ensuring each gameplay phase remains independent and easy to maintain.
@@ -455,22 +455,27 @@ Passionate about
 
 ---
 
-## 🌐 Connect
+## 🤝 Connect With Me
 
-Portfolio
+<p align="center">
 
-https://yourportfolio.com
+<a href="https://github.com/polikeybhuvan">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
-LinkedIn
+<a href="https://linkedin.com/in/polikeybhuvan">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
 
-https://linkedin.com/in/polikeybhuvan
+<a href="https://polikey-bhuvan.onrender.com">
+<img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
 
-GitHub
+<a href="mailto:your@email.com">
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 
-https://github.com/polikeybhuvan
-
----
-
+</p>
 <div align="center">
 
 ### ⭐ If you enjoyed this project, consider giving the repository a star!
